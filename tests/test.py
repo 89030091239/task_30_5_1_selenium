@@ -23,7 +23,7 @@ def test_show_my_pets():
     # Нажимаем на кнопку перехода на страницу своих питомцев
     pytest.driver.find_element(By.CSS_SELECTOR, 'div#navbarNav > ul > li > a').click()
     # Ожидание появления заголовка с именем пользователя
-    WebDriverWait(pytest.driver, 1).until(EC.visibility_of_element_located((By.TAG_NAME, 'h2')))
+    WebDriverWait(pytest.driver, 10).until(EC.visibility_of_element_located((By.TAG_NAME, 'h2')))
     # Проверяем, что мы оказались на странице своих питомцев
     assert pytest.driver.find_element(By.TAG_NAME, 'h2').text == valid_user_name
 
