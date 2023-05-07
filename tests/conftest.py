@@ -1,8 +1,6 @@
 import pytest
 from selenium import webdriver  # подключение библиотеки
 
-# driver = webdriver.Chrome()
-# driver.implicitly_wait(10)
 
 @pytest.fixture(autouse=True)
 def testing():
